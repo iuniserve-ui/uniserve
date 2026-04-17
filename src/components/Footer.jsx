@@ -42,8 +42,8 @@ const Footer = () => {
           <h3 className="font-semibold mb-4">Contact</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
             <li>📍 Bangolore, India</li>
-            <li>📞 +91 XXXXX XXXXX</li>
-            <li>✉️ contact@uniserve.com</li>
+            <li>📞 +91 8867456566</li>
+            <li>✉️ iuniserve@gmail.com</li>
           </ul>
         </div>
 
