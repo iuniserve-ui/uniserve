@@ -67,9 +67,9 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden mt-4 bg-[#0a2540] border border-white/10 rounded-xl p-6 flex flex-col gap-4 text-center shadow-lg">
-          <a href="#" onClick={() => setOpen(false)}>Home</a>
-          <a href="#services" onClick={() => setOpen(false)}>Services</a>
-          <a href="#testimonials" onClick={() => setOpen(false)}>Testimonials</a>
+          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+          <Link to="services" onClick={() => setOpen(false)}>Services</Link>
+          <Link to="about" onClick={() => setOpen(false)}>About</Link>
           <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
 
           <button className="bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold mt-2">

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
+    <div>
     <section className="relative min-h-screen bg-linear-to-r from-[#0a2540] to-[#1c3d5a] text-white flex items-center px-6 md:px-16 py-20">
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full gap-12 md:gap-20">
@@ -62,31 +63,32 @@ const Hero = () => {
 
       </div>
 
-      {/* INDUSTRIES BAR */}
+    </section>
+    <div className="bg-linear-to-r from-[#0a2540] to-[#1c3d5a]">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
         className="
-          mt-12 md:mt-0
+          grid grid-cols-2 gap-3 text-center
+
           md:absolute md:bottom-6 md:left-1/2 md:-translate-x-1/2
-          backdrop-blur-lg bg-white/10 border border-white/20
+          md:flex md:gap-10 md:text-left
           px-4 py-3 md:px-10 md:py-4
           rounded-xl
-          flex flex-wrap justify-center gap-3 md:gap-10
           text-xs md:text-sm text-gray-200
           shadow-lg
-          w-full max-w-xl mx-auto md:w-auto
+          w-full max-w-xs mx-auto md:w-auto
         "
       >
-        {["🏫Schools", "🏬Colleges", "🏥Hospitals", "🏢Corporate"].map((item) => (
-          <span className="px-2 py-1">
+        {["🏫 Schools", "🏬 Colleges", "🏥 Hospitals", "🏢 Corporate"].map((item, i) => (
+          <span key={i} className="px-2 py-1">
             {item}
           </span>
         ))}
       </motion.div>
-
-    </section>
+    </div>
+  </div>
   );
 };
 

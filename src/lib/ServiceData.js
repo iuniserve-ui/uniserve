@@ -9,13 +9,13 @@ export const services = [
         "Waste Management",
     ],
     gallery: [
-        "/public/livedata/table.jpeg",
-        "/public/livedata/wall.jpeg",
+        "/livedata/table.jpeg",
+        "/livedata/wall.jpeg",
     ],
     },
     {
     title: "Water Management",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789",
+    image: "/livedata/maintainence.jpeg",
     points: [
       "Water Audits and Reports",
       "Rainwater Harvesting",
@@ -24,13 +24,13 @@ export const services = [
     ],
     
     gallery: [
-      "/public/livedata/classroom_cleaning.jpeg",
-      "/public/livedata/group_photo.jpeg",
+      "/livedata/classroom_cleaning.jpeg",
+      "/livedata/group_photo.jpeg",
     ],
   },
   {
     title: "Power Management",
-    image: "https://images.unsplash.com/photo-1581092334421-4b0f7d5b5b1d",
+    image: "/livedata/wall.jpeg",
     points: [
       "DG & Transformer Operations",
       "HVAC Maintenance",
@@ -43,7 +43,7 @@ export const services = [
   },
   {
     title: "Safety Management",
-    image: "https://images.unsplash.com/photo-1581091012184-7e0cdfbb6795",
+    image: "/livedata/table.jpeg",
     points: [
       "Security Services",
       "Access Control",
