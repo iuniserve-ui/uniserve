@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-
+import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -14,32 +15,48 @@ const Navbar = () => {
       <div className="relative flex items-center justify-between">
 
         {/* LEFT: Logo */}
-        <h1 className="text-2xl font-bold">
-          <span className="text-yellow-400">Uni</span>Serve
-        </h1>
+        <div className="flex items-center gap-2">
+          <img src={logo} alt="logo" className="h-18" />
+          {/* <h1 className="text-2xl font-bold">
+            <span className="text-yellow-400">Uni</span>Serve
+          </h1> */}
+        </div>
 
         {/* CENTER: Links */}
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-sm">
-          <a href="#" className="hover:text-yellow-400">Home</a>
-          <a href="#services" className="hover:text-yellow-400">Services</a>
-          <a href="#testimonials" className="hover:text-yellow-400">Testimonials</a>
-          <a href="#contact" className="hover:text-yellow-400">Contact</a>
+          <Link to="/" className="hover:text-yellow-400">
+            Home
+          </Link>
+
+          <Link to="/services" className="hover:text-yellow-400">
+            Services
+          </Link>
+
+          <Link to="/about" className="hover:text-yellow-400">
+            About
+          </Link>
+
+          <a href="#contact" className="hover:text-yellow-400">
+            Contact
+          </a>
         </div>
 
         {/* RIGHT: Button + Mobile Menu */}
         <div className="flex items-center gap-4">
 
           {/* Desktop Button */}
-          <button className="hidden md:block bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold hover:scale-105 transition">
+          <Link to="/quote">
+          <button className="hidden md:block cursor-pointer bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold hover:scale-105 transition">
             Get Quote
           </button>
+          </Link>
 
           {/* Mobile Hamburger */}
           <div className="md:hidden">
             <button onClick={() => setOpen(!open)} className="flex flex-col gap-1">
-              <span className={`block w-6 h-[2px] bg-white transition ${open ? "rotate-45 translate-y-1.5" : ""}`}></span>
-              <span className={`block w-6 h-[2px] bg-white transition ${open ? "opacity-0" : ""}`}></span>
-              <span className={`block w-6 h-[2px] bg-white transition ${open ? "-rotate-45 -translate-y-1.5" : ""}`}></span>
+              <span className={`block w-6 h-0.5 bg-white transition ${open ? "rotate-45 translate-y-1.5" : ""}`}></span>
+              <span className={`block w-6 h-0.5 bg-white transition ${open ? "opacity-0" : ""}`}></span>
+              <span className={`block w-6 h-0.5 bg-white transition ${open ? "-rotate-45 -translate-y-1.5" : ""}`}></span>
             </button>
           </div>
 

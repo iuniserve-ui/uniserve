@@ -1,18 +1,26 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./pages/Services";
-import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import FullServices from "./pages/FullServices";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Quote from "./pages/Quote";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Services />
-      <Testimonial />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<FullServices />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/quote" element={<Quote />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

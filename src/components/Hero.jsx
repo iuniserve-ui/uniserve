@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import ImageCarousel from "./ImageCarousel";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-r from-[#0a2540] to-[#1c3d5a] text-white flex items-center px-6 md:px-16 py-20">
+    <section className="relative min-h-screen bg-linear-to-r from-[#0a2540] to-[#1c3d5a] text-white flex items-center px-6 md:px-16 py-20">
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full gap-12 md:gap-20">
 
@@ -14,7 +15,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+            className="text-3xl sm:text-3xl md:text-5xl font-bold leading-tight"
           >
             Smart Facility Management <br />
             <span className="text-yellow-400">
@@ -38,19 +39,25 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
-            <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition">
-              Get Free Quote
-            </button>
+            <Link to="/quote">
+              <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold cursor-pointer hover:scale-105 transition">
+                Get Free Quote
+              </button>
+            </Link>
 
-            <button className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
-              Our Services
-            </button>
+            <Link to="/fullservices">
+              <button className="border border-white px-6 py-3 rounded-lg cursor-pointer hover:bg-white hover:text-black transition">
+                Our Services
+              </button>
+            </Link>
           </motion.div>
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="w-full md:w-auto flex justify-center">
-          <ImageCarousel />
+         <div className="w-full md:w-auto flex justify-center">
+          <div className="w-full max-w-sm md:max-w-none">
+            <ImageCarousel />
+          </div>
         </div>
 
       </div>

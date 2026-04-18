@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         {/* Contact */}
-        <div>
+        <div id="contact">
           <h3 className="font-semibold mb-4">Contact</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
             <li>📍 Bangolore, India</li>
