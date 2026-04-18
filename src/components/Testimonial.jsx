@@ -1,16 +1,16 @@
 const testimonials = [
   {
-    name: "City Hospital",
+    name: "Sri Chaitanya College",
     review:
       "Outstanding service! Their cleaning staff maintains top hygiene standards.",
   },
   {
-    name: "Green Valley School",
+    name: "City High School",
     review:
       "Reliable and professional team. Highly recommended for institutions.",
   },
   {
-    name: "TechCorp Pvt Ltd",
+    name: "Techno park",
     review:
       "Their industrial cleaning solutions improved our workspace efficiency.",
   },
