@@ -46,7 +46,7 @@ const Hero = () => {
               </button>
             </Link>
 
-            <Link to="/fullservices">
+            <Link to="/services">
               <button className="border border-white px-6 py-3 rounded-lg cursor-pointer hover:bg-white hover:text-black transition">
                 Our Services
               </button>

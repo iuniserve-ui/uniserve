@@ -1,8 +1,8 @@
 
 export const services = [
     {
-    title: "Hygiene Management",
-    image: "/public/livedata/table.jpeg",
+    title: "",
+    image: "/livedata/table.jpeg",
     points: [
         "Housekeeping",
         "Neat Hygiene",
@@ -32,8 +32,8 @@ export const services = [
     title: "Power Management",
     image: "/livedata/wall.jpeg",
     points: [
-      "DG & Transformer Operations",
-      "HVAC Maintenance",
+      "Plumber operations",
+      "Electrical Maintenance and application tasks",
       "UPS & CCTV Systems",
     ],
     gallery: [
@@ -42,10 +42,10 @@ export const services = [
     ],
   },
   {
-    title: "Safety Management",
+    title: "Lawn and Gardening Management",
     image: "/livedata/table.jpeg",
     points: [
-      "Security Services",
+      "",
       "Access Control",
       "Emergency Response",
     ],
