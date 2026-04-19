@@ -1,6 +1,23 @@
 import { useState } from "react";
 import { services } from "../lib/ServiceData";
 import ImageSlider from "../components/ImageSlider";
+import {
+  BrushCleaning,
+  Users,
+  ShieldCheck,
+  Wrench,
+  Building2,
+  UserCheck,
+} from "lucide-react";
+
+const iconMap = {
+  "House Keeping Services": BrushCleaning,
+  "Man Power Supply": Users,
+  "Security Support Staff": ShieldCheck,
+  "Technical Support": Wrench,
+  "Facility Management": Building2,
+  "Office Support Staff": UserCheck,
+};
 
 const FullServices = () => {
   const [selected, setSelected] = useState(null);
@@ -27,51 +44,63 @@ const FullServices = () => {
       </h1>
 
       {/* Grid */}
-      <div className="
-        grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10
-        max-w-6xl mx-auto
-      ">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            onClick={() => setSelected(service)}
-            className="
-              bg-white rounded-xl shadow-md hover:shadow-xl
-              cursor-pointer transition overflow-hidden
-            "
-          >
-            <img
-              src={service.image}
-              alt=""
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 max-w-6xl mx-auto">
+        {services.map((service, index) => {
+          const Icon = iconMap[service.title] || BrushCleaning;
+
+          return (
+            <div
+              key={index}
+              onClick={() => setSelected(service)}
               className="
-                w-full h-40 sm:h-44 md:h-48 object-cover
+                bg-white border border-gray-200 rounded-lg
+                hover:shadow-xl hover:-translate-y-1
+                transition-all duration-300
+                cursor-pointer overflow-hidden
               "
-            />
+            >
+              {/* Image */}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-40 sm:h-44 md:h-48 object-cover transition duration-300 hover:scale-[1.02]"
+              />
 
-            <div className="p-4 sm:p-6">
-              <h2 className="text-lg sm:text-xl font-semibold text-[#0a2540] mb-2 sm:mb-3">
-                {service.title}
-              </h2>
+              <div className="p-5 sm:p-6">
 
-              <ul className="text-gray-600 text-sm space-y-1">
-                {service.points.map((p, i) => (
-                  <li key={i}>• {p}</li>
-                ))}
-              </ul>
+                {/* Title with Icon */}
+                <h2 className="text-lg sm:text-xl font-semibold text-[#0a2540] mb-4 flex items-center gap-2">
+                  <Icon size={20} className="text-amber-500" />
+                  {service.title}
+                </h2>
+
+                {/* Divider */}
+                <div className="border-t border-gray-200 mb-4"></div>
+
+                {/* Points */}
+                <div className="space-y-3">
+                  {service.points.map((p, i) => (
+                    <div
+                      key={i}
+                      className="flex items-start gap-2 text-sm text-gray-700"
+                    >
+                      <span className="text-gray-400 mt-[2px]">▪</span>
+                      <span>{p}</span>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Modal */}
       {selected && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 px-4">
 
-          <div className="
-            relative bg-white rounded-2xl shadow-2xl
-            w-full max-w-3xl
-            p-4 sm:p-6
-          ">
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl p-4 sm:p-6">
 
             {/* Close */}
             <button

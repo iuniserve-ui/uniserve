@@ -1,12 +1,13 @@
 
 export const services = [
     {
-    title: "",
+    title: "House Keeping Services",
     image: "/livedata/table.jpeg",
     points: [
-        "Housekeeping",
-        "Neat Hygiene",
-        "Waste Management",
+        "Office Cleaning",
+        "Deep Cleaning",
+        "Pantry Staff",
+        "Janitorial Services",
     ],
     gallery: [
         "/livedata/table.jpeg",
@@ -14,13 +15,13 @@ export const services = [
     ],
     },
     {
-    title: "Water Management",
+    title: "Man Power Supply",
     image: "/livedata/maintainence.jpeg",
     points: [
-      "Water Audits and Reports",
-      "Rainwater Harvesting",
-      "Swimming Pool Maintenance",
-      "STP/WTP Maintenance",
+      "Skilled Workers",
+      "Unskilled Workers",
+      "Semi-Skilled Workers",
+      "Contract Staffing",
     ],
     
     gallery: [
@@ -29,12 +30,12 @@ export const services = [
     ],
   },
   {
-    title: "Power Management",
+    title: "Security Support Staff",
     image: "/livedata/wall.jpeg",
     points: [
-      "Plumber operations",
-      "Electrical Maintenance and application tasks",
-      "UPS & CCTV Systems",
+      "Security Guards",
+      "Supervisors",
+      "Gate Management",
     ],
     gallery: [
       "https://images.unsplash.com/photo-1581092334421-4b0f7d5b5b1d",
@@ -42,16 +43,42 @@ export const services = [
     ],
   },
   {
-    title: "Lawn and Gardening Management",
+    title: "Technical Support",
     image: "/livedata/table.jpeg",
     points: [
-      "",
-      "Access Control",
-      "Emergency Response",
+      "Electricians",
+      "Plumbers",
+      "HVAC Technicians",
     ],
     gallery: [
       "https://images.unsplash.com/photo-1581091012184-7e0cdfbb6795",
     ],
   },
-  
+  {
+    title: "Facility Management",
+    image: "/livedata/table.jpeg",
+    points: [
+      "End-to-End Facility Operations",
+      "Building Maintainance",
+      "Vendor Coordination",
+      "Staff Management"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1581091012184-7e0cdfbb6795",
+    ],
+  },
+  {
+    title: "Office Support Staff",
+    image: "/livedata/wall.jpeg",
+    points: [
+      "Receptionists",
+      "Office Boys",
+      "Helpers",
+      "Data Entry Operators",
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1581092334421-4b0f7d5b5b1d",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    ],
+  },
 ];

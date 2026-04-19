@@ -1,22 +1,33 @@
 import { motion } from "framer-motion";
 import ImageCarousel from "./ImageCarousel";
 import { Link } from "react-router-dom";
+import { Phone, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div>
-    <section className="relative min-h-screen bg-linear-to-r from-[#0a2540] to-[#1c3d5a] text-white flex items-center px-6 md:px-16 py-20">
+    <section className="relative min-h-screen bg-gradient-to-r from-[#0a2540] to-[#1c3d5a] text-white flex items-center px-6 md:px-16 py-20">
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full gap-12 md:gap-20">
 
         {/* LEFT TEXT */}
         <div className="max-w-xl text-center md:text-left">
+          {/* Contact Row */}
+            <div className="flex items-center gap-4 text-[12px] text-gray-300">
+              <a href="tel:+918867456566" className="hover:text-yellow-400">
+                <Phone/>+91 8867456566
+              </a>
 
+              <span className="text-gray-500">|</span>
+
+              <a href="mailto:iuniserve@gmail.com" className="hover:text-yellow-400">
+                <Mail/>iuniserve@gmail.com
+              </a>
+            </div>
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-3xl md:text-5xl font-bold leading-tight"
+            className="text-3xl mt-10 sm:text-4xl md:text-5xl font-bold leading-tight"
           >
             Smart Facility Management <br />
             <span className="text-yellow-400">
@@ -34,6 +45,7 @@ const Hero = () => {
             maintenance solutions for hospitals, schools, and industries.
           </motion.p>
 
+          {/* CTA BUTTONS */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -52,10 +64,38 @@ const Hero = () => {
               </button>
             </Link>
           </motion.div>
+
+          {/* 🔹 CONTACT + INDUSTRIES (NEW STRUCTURE) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="mt-8 flex flex-col items-center md:items-start gap-4"
+          >
+
+            
+
+            {/* Industries Grid */}
+            <div className="
+              grid grid-cols-2 gap-3
+              bg-white/10 backdrop-blur-md border border-white/20
+              px-4 py-3 rounded-xl
+              text-xs text-gray-200
+              w-full max-w-xs
+            ">
+              {["🏫 Schools", "🏬 Colleges", "🏥 Hospitals", "🏢 Corporate"].map((item, i) => (
+                <span key={i} className="text-center">
+                  {item}
+                </span>
+              ))}
+            </div>
+
+          </motion.div>
+
         </div>
 
         {/* RIGHT IMAGE */}
-         <div className="w-full md:w-auto flex justify-center">
+        <div className="w-full md:w-auto flex justify-center">
           <div className="w-full max-w-sm md:max-w-none">
             <ImageCarousel />
           </div>
@@ -64,31 +104,6 @@ const Hero = () => {
       </div>
 
     </section>
-    <div className="bg-linear-to-r from-[#0a2540] to-[#1c3d5a]">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-        className="
-          grid grid-cols-2 gap-3 text-center
-
-          md:absolute md:bottom-6 md:left-1/2 md:-translate-x-1/2
-          md:flex md:gap-10 md:text-left
-          px-4 py-3 md:px-10 md:py-4
-          rounded-xl
-          text-xs md:text-sm text-gray-200
-          shadow-lg
-          w-full max-w-xs mx-auto md:w-auto
-        "
-      >
-        {["🏫 Schools", "🏬 Colleges", "🏥 Hospitals", "🏢 Corporate"].map((item, i) => (
-          <span key={i} className="px-2 py-1">
-            {item}
-          </span>
-        ))}
-      </motion.div>
-    </div>
-  </div>
   );
 };
 

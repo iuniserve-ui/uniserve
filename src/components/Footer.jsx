@@ -1,3 +1,6 @@
+import ContactInfo from "./ContactInfo";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-[#0a2540] text-white pt-16 pb-8">
@@ -18,9 +21,9 @@ const Footer = () => {
         {/* Quick Links */}
         <div>
           <h3 className="font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-300 text-sm">
             <a href="#" className="hover:text-yellow-400">Home</a><br/>
-            <a href="#services" className="hover:text-yellow-400">Services</a><br/>
+            <Link to="services" className="hover:text-yellow-400">Services</Link><br/>
             <a href="#testimonials" className="hover:text-yellow-400">Testimonials</a><br/>
             <a href="#contact" className="hover:text-yellow-400">Contact</a>
           </ul>
@@ -29,7 +32,7 @@ const Footer = () => {
         {/* Services */}
         <div>
           <h3 className="font-semibold mb-4">Services</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>Cleaning Staff</li>
             <li>Hospital Sanitation</li>
             <li>Industrial Cleaning</li>
@@ -40,11 +43,7 @@ const Footer = () => {
         {/* Contact */}
         <div id="contact">
           <h3 className="font-semibold mb-4">Contact</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li>📍 Bangolore, India</li>
-            <li>📞 +91 8867456566</li>
-            <li>✉️ iuniserve@gmail.com</li>
-          </ul>
+          <ContactInfo />
         </div>
 
       </div>
