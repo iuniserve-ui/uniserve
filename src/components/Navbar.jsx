@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
 
           {/* Bottom Row */}
-          <div className="flex gap-6 text-[11px] text-gray-300 mt-1">
+          {/* <div className="flex gap-6 text-[11px] text-gray-300 mt-1">
 
             <a href="tel:+918867456566" className="flex items-center gap-1 hover:text-yellow-400">
               <Phone size={12} />
@@ -71,7 +71,7 @@ const Navbar = () => {
               Job Enquiry
             </a>
 
-          </div>
+          </div> */}
 
         </div>
 
