@@ -6,7 +6,7 @@ import { Phone, Mail } from "lucide-react";
 const Hero = () => {
   return (
     <div>
-    <section className="relative min-h-screen bg-linear-to-r from-[#0a2540] to-[#1c3d5a] text-white flex items-center px-6 md:px-16 py-20">
+    <section className="relative min-h-screen bg-linear-to-r from-[#0a2540] to-[#1c3d5a] text-white flex items-center px-6 md:px-16 py-5">
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full gap-12 md:gap-20">
 
