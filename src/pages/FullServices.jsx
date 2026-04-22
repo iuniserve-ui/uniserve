@@ -51,7 +51,7 @@ const FullServices = () => {
           return (
             <div
               key={index}
-              onClick={() => setSelected(service)}
+              // onClick={() => setSelected(service)}
               className="
                 bg-white border border-gray-200 rounded-lg
                 hover:shadow-xl hover:-translate-y-1
@@ -63,7 +63,7 @@ const FullServices = () => {
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-40 sm:h-44 md:h-48 object-cover transition duration-300 hover:scale-[1.02]"
+                className="w-full h-48 object-cover object-top"
               />
 
               <div className="p-5 sm:p-6">

@@ -2,7 +2,7 @@
 export const services = [
     {
     title: "House Keeping Services",
-    image: "/livedata/table.jpeg",
+    image: "house.png",
     points: [
         "Office Cleaning",
         "Deep Cleaning",
@@ -16,7 +16,7 @@ export const services = [
     },
     {
     title: "Man Power Supply",
-    image: "/livedata/maintainence.jpeg",
+    image: "manpower.png",
     points: [
       "Skilled Workers",
       "Unskilled Workers",
@@ -31,7 +31,7 @@ export const services = [
   },
   {
     title: "Security Support Staff",
-    image: "/livedata/wall.jpeg",
+    image: "security.png",
     points: [
       "Security Guards",
       "Supervisors",
@@ -44,7 +44,7 @@ export const services = [
   },
   {
     title: "Technical Support",
-    image: "/livedata/table.jpeg",
+    image: "technical.png",
     points: [
       "Electricians",
       "Plumbers",
@@ -56,7 +56,7 @@ export const services = [
   },
   {
     title: "Facility Management",
-    image: "/livedata/table.jpeg",
+    image: "facility.png",
     points: [
       "End-to-End Facility Operations",
       "Building Maintainance",
@@ -69,7 +69,7 @@ export const services = [
   },
   {
     title: "Office Support Staff",
-    image: "/livedata/wall.jpeg",
+    image: "office.png",
     points: [
       "Receptionists",
       "Office Boys",
