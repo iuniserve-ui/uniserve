@@ -1,13 +1,13 @@
 const testimonials = [
   {
-    name: "Sri Chaitanya College",
+    name: "Sudha Medows",
     review:
       "Outstanding service! Their cleaning staff maintains top hygiene standards.",
   },
   {
-    name: "City High School",
+    name: "Electrical Services",
     review:
-      "Reliable and professional team. Highly recommended for institutions.",
+      "Reliable and professional team. Highly recommended for technical support.",
   },
   {
     name: "Techno park",
