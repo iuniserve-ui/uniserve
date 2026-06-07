@@ -26,7 +26,7 @@ const ContactInfo = () => {
           className="flex items-center gap-3 hover:text-green-500 transition"
         >
           <Phone size={18} />
-          <span>+91 8867456566</span>
+          <span>+91 8341689831</span>
         </a>
       </li>
 
